@@ -1,0 +1,15 @@
+Resultados del Test 3 y Comparación (Paso 14)
+=============================================
+
+Se tomaron 100 muestras del ADC manteniendo la misma posición del potenciómetro.
+
+Análisis estadístico de las muestras:
+- Media: 492.03
+- Desvío Estándar: 5.29
+- Tiempo de ejecución (Ticks): 30
+
+Comparación con el Test 1 y Test 2:
+Los valores obtenidos en el Test 3 son estadísticamente casi idénticos a los del Test 1. Presenta un desvío estándar alto (~5.3), lo que indica que se están tomando nuevamente lecturas "crudas" sin aplicar el filtro por software que vimos en el Test 2. Además, el tiempo de ejecución vuelve a ser de 30 Ticks.
+
+Conclusión:
+Al no haber diferencias en los datos ni en el tiempo respecto al Test 1, la diferencia de esta implementación radica en la arquitectura subyacente del código. Mientras el Test 1 típicamente utiliza un método bloqueante (Polling) donde el microcontrolador espera activamente que termine cada conversión, el Test 3 probablemente implemente una lectura no bloqueante mediante Interrupciones (IT) o Acceso Directo a Memoria (DMA). Esto permite obtener los mismos datos en la misma cantidad de Ticks de ejecución, pero liberando a la CPU para que pueda realizar otras tareas de fondo mientras el hardware toma las muestras.

@@ -1,0 +1,17 @@
+Resultados del Test 2 y Comparación (Paso 11)
+=============================================
+
+Se tomaron 100 muestras del ADC manteniendo la misma posición del potenciómetro que en el Test 1.
+
+Análisis estadístico de las muestras:
+- Media: 491.95
+- Desvío Estándar: 1.27
+- Tiempo de ejecución (Ticks): 117
+
+Comparación con el Test 1:
+1. Media: La media se mantiene estable (alrededor de 492), confirmando que la lectura central es consistente.
+2. Desvío Estándar: Se redujo drásticamente de 5.89 (Test 1) a 1.27. Esto indica que la señal es mucho más estable y limpia.
+3. Tiempo de ejecución: Los Ticks aumentaron considerablemente de 30 a 117.
+
+Conclusión:
+El Test 2 implementa un mecanismo de filtrado (como un filtro de promedio móvil por software) para mitigar el ruido de la señal analógica. Como resultado directo de este procesamiento adicional, la varianza de los datos disminuye (mejor calidad de señal), pero a costa de un mayor consumo de tiempo de procesamiento por parte del microcontrolador.

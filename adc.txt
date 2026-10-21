@@ -1,0 +1,10 @@
+Análisis de la configuración del ADC1 (Paso 5)
+==============================================
+
+Al inspeccionar la configuración del periférico ADC1 en la herramienta Device Configuration Tool (archivo .ioc), se observan las siguientes características de hardware sin aplicar modificaciones:
+
+- Resolución: El microcontrolador STM32F103RB posee un ADC con una resolución fija por hardware de 12 bits (rango de valores de 0 a 4095).
+- Canal: Está configurado para leer el Channel 0, el cual se encuentra físicamente mapeado al pin PA0 (donde está conectado el punto medio del potenciómetro).
+- Alineación de datos (Data Alignment): Alineación a la derecha (Right alignment).
+- Modo de conversión continua (Continuous Conversion Mode): Deshabilitado.
+- Tiempo de muestreo (Sampling Time): Configurado en los ciclos de reloj predeterminados para la conversión regular.

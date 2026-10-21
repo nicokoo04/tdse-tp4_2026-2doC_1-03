@@ -1,0 +1,12 @@
+Resultados del Test 1 (Paso 8)
+==============================
+
+Se tomaron 100 muestras del ADC configurando el punto medio del potenciómetro en un valor constante cercano al centro. 
+
+Análisis estadístico de las muestras:
+- Media: 492.58
+- Desvío Estándar: 5.89
+- Tiempo de ejecución (Ticks): 30
+
+Conclusión del Test 1:
+Se observa un nivel de ruido eléctrico/térmico natural en la lectura cruda (raw) del ADC, evidenciado por un desvío estándar cercano a 6. El sistema tarda 30 ticks en capturar las 100 muestras.
